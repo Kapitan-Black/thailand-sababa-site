@@ -1,9 +1,10 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 const Input = React.forwardRef<
   HTMLInputElement,
-  React.InputHTMLAttributes<HTMLInputElement>
+  React.ComponentPropsWithoutRef<"input">
 >(({ className, type, ...props }, ref) => {
   return (
     <input
@@ -17,6 +18,7 @@ const Input = React.forwardRef<
     />
   );
 });
+
 Input.displayName = "Input";
 
 export { Input };
