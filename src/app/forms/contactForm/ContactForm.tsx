@@ -3,7 +3,6 @@
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Input } from "@/components/ui/input";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import LoadingButton from "@/components/LoadingButton";
@@ -50,7 +49,7 @@ const ContactForm = () => {
             className="flex flex-col gap-4 md:gap-4 w-full"
           >
             <div className="flex justify-center items-center flex-col md:flex-row gap-4">
-              <Input
+              <input
                 {...register("name")}
                 type="text"
                 maxLength={40}
@@ -60,7 +59,7 @@ const ContactForm = () => {
                 }`}
                 title={errors.name ? errors.name.message : ""}
               />
-              <Input
+              <input
                 {...register("email")}
                 type="email"
                 maxLength={40}
@@ -73,7 +72,7 @@ const ContactForm = () => {
             </div>
 
             <div className="flex justify-center items-center flex-col md:flex-row gap-4">
-              <Input
+              <input
                 {...register("phoneNumber")}
                 type="number"
                 maxLength={20}
@@ -84,7 +83,7 @@ const ContactForm = () => {
                   MozAppearance: "textfield",
                 }}
               />
-              <Input
+              <input
                 {...register("numberOfTravelers")}
                 type="number"
                 min={1}
