@@ -1,13 +1,15 @@
 import Link from "next/link";
-
-
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <div dir="rtl" className="relative">
-      <img
+      <Image
         src="/footer/footer.png"
+        alt="footer"
         className="w-full h-[350px] md:h-[300px] object-cover opacity-40"
+              width={1200}
+              height={400}
       />
 
       {/* Overlay for the footer content */}

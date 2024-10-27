@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 
 type HeaderProps = {
   showBackLink?: boolean; // Accept the prop
@@ -7,7 +7,6 @@ type HeaderProps = {
 };
 
 const Header = ({ showBackLink, showContactLink = true }: HeaderProps) => {
-
   return (
     <div className="py-2 fixed top-0 left-0 w-full bg-white z-20 shadow-lg">
       <div
@@ -16,14 +15,20 @@ const Header = ({ showBackLink, showContactLink = true }: HeaderProps) => {
         }`}
       >
         <Link href="/#hero">
-          <img className="w-36 md:w-64" src="/logo/logo.png" alt="logo" />
+          <Image
+            className="w-36 md:w-64"
+            src="/logo/logo.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
         </Link>
         {showContactLink && (
           <Link
             href="/"
             className="flex flex-col justify-center text-sm md:text-lg text-gray-700  hover:text-black px-4 -my-2 rounded-lg hover:scale-105"
           >
-            <div className="font-semibold"> 
+            <div className="font-semibold">
               <p className="text-center">לחצו כאן</p>
               <p className="text-center">להשארת פרטים</p>
             </div>
