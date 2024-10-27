@@ -19,8 +19,8 @@ const Header = ({ showBackLink, showContactLink = true }: HeaderProps) => {
             className="w-36 md:w-64"
             src="/logo/logo.png"
             alt="logo"
-            width={100}
-            height={100}
+            width={300}
+            height={300}
           />
         </Link>
         {showContactLink && (

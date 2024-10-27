@@ -1,10 +1,9 @@
-"use client";
+'use client'
 
 import { useForm } from "react-hook-form";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Input } from "@/components/ui/input";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"; 
 import { Button } from "@/components/ui/button";
 import LoadingButton from "@/components/LoadingButton";
 import contactForm from "./zodSchema";
@@ -12,11 +11,12 @@ import "react-datepicker/dist/react-datepicker.css"; // Import CSS
 import { useContext } from "react";
 import { FormContext } from "@/app/context";
 
+
 type signUpSchema = z.infer<typeof contactForm>;
 
 const ContactForm = () => {
-  const router = useRouter();
-  const { setFormData } = useContext(FormContext) || {};
+    const router = useRouter()
+    const {setFormData} = useContext(FormContext) || {}
 
   const {
     register,
@@ -26,13 +26,16 @@ const ContactForm = () => {
   } = useForm<signUpSchema>({ resolver: zodResolver(contactForm) });
 
   const onSubmit = async (data: signUpSchema) => {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      
     if (setFormData) setFormData(data);
 
-    reset();
+      reset();
 
-    router.push("/forms/mainContactForm");
+          router.push("/forms/mainContactForm");
+
+      
+      
   };
 
   return (
@@ -50,7 +53,7 @@ const ContactForm = () => {
             className="flex flex-col gap-4 md:gap-4 w-full"
           >
             <div className="flex justify-center items-center flex-col md:flex-row gap-4">
-              <Input
+              <input
                 {...register("name")}
                 type="text"
                 maxLength={40}
@@ -60,7 +63,7 @@ const ContactForm = () => {
                 }`}
                 title={errors.name ? errors.name.message : ""}
               />
-              <Input
+              <input
                 {...register("email")}
                 type="email"
                 maxLength={40}
@@ -73,7 +76,7 @@ const ContactForm = () => {
             </div>
 
             <div className="flex justify-center items-center flex-col md:flex-row gap-4">
-              <Input
+              <input
                 {...register("phoneNumber")}
                 type="number"
                 maxLength={20}
@@ -84,7 +87,7 @@ const ContactForm = () => {
                   MozAppearance: "textfield",
                 }}
               />
-              <Input
+              <input
                 {...register("numberOfTravelers")}
                 type="number"
                 min={1}
