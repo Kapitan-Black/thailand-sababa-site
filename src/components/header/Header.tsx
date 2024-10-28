@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type HeaderProps = {
   showBackLink?: boolean; // Accept the prop
@@ -13,9 +14,15 @@ const Header = ({ showBackLink, showContactLink = true }: HeaderProps) => {
           showContactLink ? "justify-between" : "justify-end"
         }`}
       >
-        {/* <Link href="/#hero"> */}
-          <img src="/logo/resized-logo.jpg" alt="logo" className="w-36 md:w-64" />
-        {/* </Link> */}
+        <Link href="/#hero">
+          <Image
+            src="/logo/resized-logo.jpg"
+            alt="logo"
+            className="w-36 md:w-64"
+            width={300}
+            height={300}
+          />
+        </Link>
         {showContactLink && (
           <Link
             href="/"
