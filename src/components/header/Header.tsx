@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 type HeaderProps = {
   showBackLink?: boolean; // Accept the prop
