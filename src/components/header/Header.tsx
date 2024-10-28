@@ -13,9 +13,9 @@ const Header = ({ showBackLink, showContactLink = true }: HeaderProps) => {
           showContactLink ? "justify-between" : "justify-end"
         }`}
       >
-        <Link href="/#hero">
+        {/* <Link href="/#hero"> */}
           <img src="/logo/logo.png" alt="logo" className="w-36 md:w-64" />
-        </Link>
+        {/* </Link> */}
         {showContactLink && (
           <Link
             href="/"
