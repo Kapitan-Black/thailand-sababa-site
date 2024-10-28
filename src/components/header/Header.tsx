@@ -19,9 +19,9 @@ const Header = ({ showBackLink, showContactLink = true }: HeaderProps) => {
             className="w-36 md:w-64"
             src="/logo/logo-thailand-sababa1.png"
             alt="logo"
-            layout="fill"
-            // width={258}
-            // height={100}
+            // layout="fill"
+            width={258}
+            height={100}
           />
         </Link>
         {showContactLink && (
