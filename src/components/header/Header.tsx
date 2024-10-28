@@ -16,7 +16,7 @@ const Header = ({ showBackLink, showContactLink = true }: HeaderProps) => {
       >
         <Link href="/#hero">
           <Image
-            className="w-36 md:w-64"
+            // className="w-36 md:w-64"
             src="/logo/logo.png"
             alt="logo"
             // layout="fill"
