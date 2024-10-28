@@ -14,7 +14,7 @@ const Header = ({ showBackLink, showContactLink = true }: HeaderProps) => {
         }`}
       >
         {/* <Link href="/#hero"> */}
-          <img src="/logo/logo.png" alt="logo" className="w-36 md:w-64" />
+          <img src="/logo/resized-logo.jpg" alt="logo" className="w-36 md:w-64" />
         {/* </Link> */}
         {showContactLink && (
           <Link
